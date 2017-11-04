@@ -20,12 +20,13 @@ comments = subreddit.stream.comments()
 
 for comment in comments:
     text = comment.body
-    if TARGET_NAME in text and comment.id not in repliedComments:
+    if TARGET_NAME in text and comment.id not in repliedComments and comment.author != "Her_Bot":
         print("Ann detected: ")
         print(text)
+        print("Replying")
 
         try:
-            comment.reply(MESSAGE)
+            comment.reply(">" + text + "\n\n" + MESSAGE)
             repliedComments.append(comment.id)
             with open("repliedComments.txt", "w") as f:
                 for commentId in repliedComments:
