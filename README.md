@@ -1,2 +1,2 @@
 # HerBot
-Reddit bot
+Reddit bot that replies to references to "Ann" with "Her?"
