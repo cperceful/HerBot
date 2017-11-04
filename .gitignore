@@ -102,3 +102,4 @@ ENV/
 
 .ini
 praw.ini
+repliedComments.txt
